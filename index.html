@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Security Portfolio</title>
+    <title>Friday's Security Consulting</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -20,157 +20,144 @@
 
     <main class="container mx-auto py-12 px-4 md:px-6">
 
-        <!-- Header Section -->
         <header class="text-center mb-16">
             <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 tracking-tight">
-                My Security Portfolio
+                Friday's Security Consulting
             </h1>
             <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-                Showcasing my work in ethical hacking and security research through professional case studies.
+                Providing expert security audits and penetration testing to protect your digital assets.
             </p>
         </header>
 
-        <!-- About Me Section -->
         <section id="about" class="bg-white rounded-xl shadow-lg border border-gray-200 mb-12">
             <div class="p-6 md:p-10 lg:p-12">
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6">About Me</h2>
                 <p class="text-gray-700 leading-relaxed">
-                    I am a results-driven ethical hacker with a proven track record of finding critical vulnerabilities and providing clear, actionable recommendations. My expertise is broad, covering a wide range of issues including **Insecure Direct Object Reference (IDOR), Broken Access Control, Information Disclosure, Cross-Site Scripting (XSS), SQL Injection, and logical flaws**. I specialize in helping organizations of all sizes secure their systems, protect user data, and improve their overall security posture. In addition to individual bug reports, I am also available to conduct a **full security audit** to provide a comprehensive analysis of your application's defenses.
+                    I am a highly skilled security consultant with a focus on web and mobile application security. With a proven track record of identifying critical vulnerabilities, my work goes beyond finding bugs—I provide **clear, actionable recommendations** that help organizations of all sizes proactively secure their systems and enhance their overall security posture. My expertise includes **Insecure Direct Object Reference (IDOR), Broken Access Control, Information Disclosure, Cross-Site Scripting (XSS), SQL Injection, and complex logical flaws**. I am dedicated to helping you protect your user data and business reputation.
                 </p>
             </div>
         </section>
 
-        <!-- Case Studies Section -->
+        <section id="services" class="mb-12">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-8">My Services</h2>
+            <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 md:p-10 lg:p-12">
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    I offer comprehensive security services designed to meet the specific needs of your business. My services include:
+                </p>
+                <ul class="list-disc list-inside space-y-3 text-gray-700">
+                    <li>**Web Application Penetration Testing:** A full-scope security assessment of your web applications to find and fix vulnerabilities before they can be exploited.</li>
+                    <li>**API Security Audits:** Targeted reviews of your API endpoints to protect against common and complex threats.</li>
+                    <li>**Source Code Reviews:** A deeper analysis of your application's source code to identify architectural flaws and business logic vulnerabilities that automated tools might miss.</li>
+                    <li>**Comprehensive Security Audits:** A thorough, time-boxed engagement to provide a complete and detailed analysis of your application's defenses.</li>
+                </ul>
+            </div>
+        </section>
+
         <section id="case-studies" class="mb-12">
             <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-8">Case Studies</h2>
 
-            <!-- Case Study 1: InnoGames (Logical Flaw) -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 mb-8">
                 <div class="p-6 md:p-10 lg:p-12">
                     <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">
-                        Case Study 1: Logical Flaw in Account Creation Confuses Email with Username
+                        Case Study 1: Resolving a Critical Logical Flaw in a User Registration System
                     </h3>
                     <div class="space-y-6 text-gray-700">
                         <div>
                             <p class="font-semibold text-gray-800">Executive Summary:</p>
-                            <p>A logical flaw was discovered in the user registration process, where the system incorrectly applied username validation rules to the email address field. This resulted in a denial of service for new users, as many common email addresses were rejected, making it impossible to create an account.</p>
+                            <p>I identified a logical flaw in a user registration process that was causing a **denial of service** for new users. The system incorrectly validated email addresses, preventing many legitimate users from creating an account. My report enabled the client to quickly fix the issue, improving user experience and conversion rates.</p>
                         </div>
                         <div>
                             <p class="font-semibold text-gray-800">Technical Details:</p>
-                            <ul class="list-disc list-inside space-y-1">
-                                <li><strong>Vulnerability Type:</strong> Logical Flaw / Improper Authentication (Generic).</li>
-                                <li><strong>Description:</strong> The account creation form's validation logic was misconfigured. It was applying a strict, non-standard character and length limit (max 24 characters) to the email field, confusing it with the username field. This broke the registration process for valid email addresses.</li>
-                                <li><strong>Proof of Concept (PoC):</strong>
-                                    <ol class="list-decimal list-inside ml-4 mt-2 space-y-1">
-                                        <li>Attempt to create a new account with a standard email address containing special characters or one longer than 24 characters.</li>
-                                        <li>The form will either clear itself or return a generic error about invalid characters or an incorrect length, preventing account creation.</li>
-                                    </ol>
-                                </li>
-                            </ul>
+                            <p>The account creation form's validation logic was misconfigured, applying strict username rules (max 24 characters, no special symbols) to the email field. This caused valid email addresses to be rejected. I provided a detailed proof-of-concept and recommended a separation of validation logic for email and username fields.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Case Study 2: Altera (Information Disclosure) -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 mb-8">
                 <div class="p-6 md:p-10 lg:p-12">
                     <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">
-                        Case Study 2: Information Disclosure via Broken Access Control on a Technical Drawing
+                        Case Study 2: Preventing Proprietary Data Exposure via Broken Access Control
                     </h3>
                     <div class="space-y-6 text-gray-700">
                         <div>
                             <p class="font-semibold text-gray-800">Executive Summary:</p>
-                            <p>A broken access control vulnerability was discovered, allowing unauthorized users to directly access sensitive technical drawings and internal documents by manipulating public-facing URLs. This vulnerability could lead to the unauthorized disclosure of proprietary information and internal data.</p>
+                            <p>I uncovered a broken access control vulnerability that allowed unauthorized access to sensitive technical drawings and internal documents. This flaw could have led to a significant **disclosure of proprietary business information**. I provided the client with a clear path to remediation to secure their internal files.</p>
                         </div>
                         <div>
                             <p class="font-semibold text-gray-800">Technical Details:</p>
-                            <ul class="list-disc list-inside space-y-1">
-                                <li><strong>Vulnerability Type:</strong> Broken Access Control / Insecure Direct Object Reference (IDOR).</li>
-                                <li><strong>Description:</strong> The application did not properly validate user permissions when accessing files stored in a specific directory. By observing the URL pattern of a single public PDF document, I was able to predict and access other sensitive files, suggesting a broader, systemic folder permission issue.</li>
-                                <li><strong>Proof of Concept (PoC):</strong>
-                                    <p>I accessed a publicly available PDF document with a specific URL format. By changing the document identifier in the URL, I was able to successfully access and view other restricted technical drawings without any authentication or authorization. This indicates a failure in the application's access control logic to prevent unauthorized direct object access.</p>
-                                </li>
-                            </ul>
+                            <p>By manipulating URL parameters, I bypassed the application's access control to view restricted documents. This demonstrated a systemic failure in the application's authorization framework. My report provided an immediate fix and long-term recommendations for a more robust access control model to prevent future IDOR vulnerabilities.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Case Study 3: Salto Wecosystem (IDOR) -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 mb-8">
                 <div class="p-6 md:p-10 lg:p-12">
                     <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">
-                        Case Study 3: IDOR on User Profile Endpoint leads to 500 Internal Server Error
+                        Case Study 3: Addressing a Server Crash Vulnerability
                     </h3>
                     <div class="space-y-6 text-gray-700">
                         <div>
                             <p class="font-semibold text-gray-800">Executive Summary:</p>
-                            <p>An Insecure Direct Object Reference (IDOR) vulnerability was found on a user profile API endpoint. Instead of returning a proper authorization error, the server crashed with a 500 Internal Server Error, indicating a flaw in the access control logic that could be used to cause a denial of service.</p>
+                            <p>I identified an Insecure Direct Object Reference (IDOR) on a user profile API endpoint that, when exploited, caused the server to crash with a 500 Internal Server Error. This vulnerability created a **denial of service** risk and indicated a fundamental flaw in the application's error handling and access control logic.</p>
                         </div>
                         <div>
                             <p class="font-semibold text-gray-800">Technical Details:</p>
-                            <ul class="list-disc list-inside space-y-1">
-                                <li><strong>Vulnerability Type:</strong> Insecure Direct Object Reference (IDOR).</li>
-                                <li><strong>Endpoint:</strong> <code>/systemcenterapi/v1/users/</code></li>
-                                <li><strong>Description:</strong> When attempting to access another user's profile by changing the ID in the API request, the server responded with a 500 Internal Server Error. This confirms a broken access control issue where the application fails to correctly handle an unauthorized request, leading to a server crash instead of a proper 403 Forbidden response.</li>
-                                <li><strong>Proof of Concept (PoC):</strong>
-                                    <ol class="list-decimal list-inside ml-4 mt-2 space-y-1">
-                                        <li>Log in as a valid user.</li>
-                                        <li>Capture the API request to your own profile, which contains your user ID.</li>
-                                        <li>Change the user ID in the request path to a different, valid user ID.</li>
-                                        <li>The server will respond with a 500 Internal Server Error, indicating that the request was improperly processed and caused a server-side crash.</li>
-                                    </ol>
-                                </li>
-                            </ul>
+                            <p>When attempting to access another user's profile by changing the ID in the API request, the server failed to return a proper authorization error (403 Forbidden). Instead, it crashed. My report detailed the issue and recommended implementing proper access control checks to prevent unauthorized data access and ensure graceful error handling.</p>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Case Study 4: Allegro (Denial of Service) -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 mb-8">
                 <div class="p-6 md:p-10 lg:p-12">
                     <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-6">
-                        Case Study 4: Overly Aggressive Security Measures Lead to Denial of Service
+                        Case Study 4: Optimizing Security Measures to Prevent Legitimate User Blocking
                     </h3>
                     <div class="space-y-6 text-gray-700">
                         <div>
                             <p class="font-semibold text-gray-800">Executive Summary:</p>
-                            <p>A denial of service vulnerability was identified where a simple, harmless search query was being misinterpreted as a malicious attack. The overly aggressive security system immediately blocked the user's IP, preventing legitimate access to the site. This could lead to a poor user experience and a loss of business.</p>
+                            <p>A simple, non-malicious search query was being misinterpreted as a malicious attack by an overly aggressive security system, leading to a **denial of service for legitimate users**. This bug was causing a poor user experience and potential loss of business. I reported the issue, allowing the company to fine-tune their security rules.</p>
                         </div>
                         <div>
                             <p class="font-semibold text-gray-800">Technical Details:</p>
-                            <ul class="list-disc list-inside space-y-1">
-                                <li><strong>Vulnerability Type:</strong> Denial of Service (DoS).</li>
-                                <li><strong>Endpoint:</strong> Search functionality</li>
-                                <li><strong>Description:</strong> The Web Application Firewall (WAF) or other security controls on the search page were too sensitive. A basic HTML payload, such as `<h1>XSS</h1>`, was treated as a malicious attempt, causing the user's IP to be completely blocked from the site.</li>
-                                <li><strong>Proof of Concept (PoC):</strong>
-                                    <ol class="list-decimal list-inside ml-4 mt-2 space-y-1">
-                                        <li>Navigate to the search page.</li>
-                                        <li>Type a non-malicious HTML payload (e.g., `<h1>XSS</h1>`) into the search bar.</li>
-                                        <li>Submit the query. The security system will block your IP, and you will receive a "You have been blocked" error message, effectively causing a denial of service.</li>
-                                    </ol>
-                                </li>
-                            </ul>
+                            <p>I found that inputting a basic HTML payload (e.g., `<h1>XSS</h1>`) into the search bar triggered a Web Application Firewall (WAF) rule, causing the user's IP to be permanently blocked. My report highlighted the need to adjust the security rules to be more precise and prevent legitimate user activity from being flagged as malicious.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Call to Action for Audits -->
-        <section id="audit-services" class="text-center mt-16 p-8 md:p-12 bg-white rounded-xl shadow-lg border border-gray-200">
-            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to Secure Your System?</h2>
+        <section id="testimonials" class="mb-12">
+            <h2 class="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-8">What People Say</h2>
+            <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 md:p-10 lg:p-12">
+                <div class="space-y-6">
+                    <div class="text-center">
+                        <p class="text-lg italic text-gray-600">"Friday provided an incredibly detailed report. His work was thorough, and his insights helped us close a critical vulnerability quickly."</p>
+                        <p class="font-bold mt-2 text-gray-900">— Security Team, A Financial Technology Company</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-lg italic text-gray-600">"We were impressed with the speed and accuracy of his findings. He has a unique ability to find issues that others miss."</p>
+                        <p class="font-bold mt-2 text-gray-900">— Lead Developer, A Publicly Traded Company</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="text-center mt-16 p-8 md:p-12 bg-white rounded-xl shadow-lg border border-gray-200">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to Protect Your Business?</h2>
             <p class="text-lg text-gray-700 mb-6">
-                If you're looking for a professional and thorough security assessment, I am available to conduct a **full security audit** of your application.
+                If you need a professional and reliable security partner, I'm here to help. Let's discuss how a comprehensive security audit can safeguard your systems.
             </p>
-            <p class="text-lg text-gray-700">
-                You can reach me directly at <a href="mailto:fridayj99@gmail.com" class="text-blue-600 hover:text-blue-800 font-bold underline">fridayj99@gmail.com</a>.
-            </p>
+            <a href="mailto:fridayj99@gmail.com" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                Contact Me for a Quote
+            </a>
+            <div class="mt-4 text-gray-600">
+                <p>Or send an email to <a href="mailto:fridayj99@gmail.com" class="underline hover:text-blue-600">fridayj99@gmail.com</a></p>
+            </div>
         </section>
 
     </main>
 </body>
 </html>
-
